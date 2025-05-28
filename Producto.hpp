@@ -1,5 +1,6 @@
 #ifndef PRODUCTO_HPP
 #define PRODUCTO_HPP
+#include "Inventario.hpp"
 class Producto {
 private:
     std::string nombre;
