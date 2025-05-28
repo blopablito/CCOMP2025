@@ -8,11 +8,7 @@ public: //CREO que deberia ser protecte ya se vera
     char dni[8];
 
 public:
-    Persona(const char* nombre, int edad, const char* dni);
-    virtual void mostrarInfo();
+    Persona(const char* nombre, int edad, const char* dni); //costructor
 };
-
-#endif // PERSONA_HPP
-
 
 #endif
