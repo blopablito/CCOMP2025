@@ -11,19 +11,4 @@ public:
     Persona(const char* nombre, int edad, const char* dni); //costructor
     void mostrarInfo();
 };
-class empleado {
-private:
-int horastrabajo;
-float pagaportrabajo;
-public:
-int trabajar(int hora);
-float paga();
-};
-/**
-int main (){
-gerente(funcion acceso a todo) :v
-empleado(horariotrabajo,paga,trabajo)
-trabajar=paga
-}
-**/
 #endif
