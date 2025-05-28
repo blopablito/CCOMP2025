@@ -10,6 +10,7 @@ public: //private proteger su informacion
   double PagaporTrabajo;
 
 public:
+  Empleado(int HorarioDeTrabajo;int HorasTrabajo;double PagaporTrabajo);//construtor
   int trabajar(int hora);
   float paga();
 };
