@@ -1,1 +1,2 @@
-as
+#ifndef INVENTARIO_HPP
+#define INVENTRAIO_HPP
