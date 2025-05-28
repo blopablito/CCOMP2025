@@ -9,6 +9,7 @@ public: //CREO que deberia ser protecte ya se vera
 
 public:
     Persona(const char* nombre, int edad, const char* dni); //costructor
+    void mostrarInfo();
 };
 
 #endif
