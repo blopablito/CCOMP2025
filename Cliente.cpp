@@ -3,14 +3,13 @@
 
 using namespace std;
 
-Cliente::Cliente(const char* nombre, int edad, const char* dni, const char* preferencias)
-    : Persona(nombre, edad, dni) {
+Cliente::Cliente(const char* nombre, int edad, const char* dni, const char* preferencias):Persona(nombre, edad, dni) {
     int i = 0;
     while (preferencias[i] != '\0' && i < 49) {
-        this->preferencias[i] = preferencias[i];
+        preferencias[i] = preferencias[i];
         i++;
     }
-    this->preferencias[i] = '\0';
+    preferencias[i] = '\0';
 }
 
 void Cliente::mostrarInfo() {
