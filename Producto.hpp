@@ -1,1 +1,2 @@
-as
+#ifndef PRODUCTO_HPP
+#define PRODUCTO_HPP
