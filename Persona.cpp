@@ -6,10 +6,10 @@ using namespace std;
 Persona::Persona(const char* nombre, int edad, const char* dni) : edad(edad) {
     int i = 0;
     while (nombre[i] != '\0' && i < 49) {
-        this->nombre[i] = nombre[i];
+        nombre[i] = nombre[i];
         i++;
     }
-    this->nombre[i] = '\0';
+    nombre[i] = '\0';
 
     i = 0;
     while (dni[i] != '\0' && i < 9) {
