@@ -1,17 +1,18 @@
 #ifndef INVENTARIO_HPP
 #define INVENTARIO_HPP
 
-class (inventario){
-public:   //cantidad producto
-    Inventario(const char* producto, int cantidad);
-    ~Inventario();
-    void mostrarInventario();
+
+class Inventario {
+public:
+    Inventario(const char* nombreProducto, int cantidadInicial);
+    ~Inventario(); // destrucotr
+    void mostrarInventario() const;
     void agregarCantidad(int mas);
     void reducirCantidad(int menos);
-private:   //producto
-    char producto[50];
-    int cantidad;
 
+private:
+    char producto[50]; // Nombre del producto
+    int cantidad;      // Cantidad disponible
 };
 
 #endif
