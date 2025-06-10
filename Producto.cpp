@@ -1,11 +1,11 @@
 #include <iostream>
 #include "Proyectos.h"
-#include "Persona.h" // Para usar copiarCadena
+#include "Persona.h" 
 
 using namespace std;
 
 Productos::Productos() {
-    nombre[0] = '\0'; // Inicialización segura
+    nombre[0] = '\0'; // Inicializacion
     precioUnidad = 0.0;
     cantidadMateriales = 0;
 }
