@@ -1,15 +1,17 @@
-#ifndef PERSONA_HPP
-#define PERSONA_HPP
+#ifndef PERSONA_H
+#define PERSONA_H
 
 class Persona {
-protected: // porque es clase madrey cualqueirre que herede
+protected:
     char nombre[50];
     int edad;
     char dni[8];
 
 public:
     Persona(const char* nombre, int edad, const char* dni);
-    ~Persona();
     void mostrarInfo();
 };
+
+void copiarCadena(const char* origen, char* destino, int tam);
+
 #endif
