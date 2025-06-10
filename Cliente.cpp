@@ -1,18 +1,14 @@
-#include "Cliente.hpp"
 #include <iostream>
+#include "Cliente.h"
+#include "Persona.h"
 
 using namespace std;
 
-Cliente::Cliente(const char* nombre, int edad, const char* dni, const char* preferencias):Persona(nombre, edad, dni) {
-    int i = 0;
-    while (preferencias[i] != '\0' && i < 49) {
-        preferencias[i] = preferencias[i];
-        i++;
-    }
-    preferencias[i] = '\0';
+Cliente::Cliente(const char* nombre, int edad, const char* dni, const char* pedido)
+    : Persona(nombre, edad, dni) {
+    copiarCadena(pedido, Pedido, 50); // copia "pedido" en "Pedido"
 }
 
 void Cliente::mostrarInfo() {
     Persona::mostrarInfo();
-    cout << "Preferencias: " << preferencias << endl;
-}
+    cout << "Pedido: " << Pedido << endl;
