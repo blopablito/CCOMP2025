@@ -1,24 +1,21 @@
-#include "Persona.hpp"
+#include "Persona.h"
 #include <iostream>
 
-using namespace std;
-
-Persona::Persona(const char* nombre, int edad, const char* dni) : edad(edad) {
+void copiarCadena(const char* origen, char* destino, int tam) {
     int i = 0;
-    while (nombre[i] != '\0' && i < 49) {
-        nombre[i] = nombre[i];
+    while (origen[i] != '\0' && i < tam - 1) {
+        destino[i] = origen[i];
         i++;
     }
-    nombre[i] = '\0';
+    destino[i] = '\0';
+}
 
-    i = 0;
-    while (dni[i] != '\0' && i < 9) {
-        this->dni[i] = dni[i];
-        i++;
-    }
-    this->dni[i] = '\0';
+Persona::Persona(const char* nombre, int edad, const char* dni) {
+    copiarCadena(nombre, this->nombre, 50);
+    this->edad = edad;
+    copiarCadena(dni, this->dni, 8);
 }
 
 void Persona::mostrarInfo() {
-    cout << "Nombre: " << nombre << ", Edad: " << edad << ", DNI: " << dni << endl;
+    std::cout << "Nombre: " << nombre << "\nEdad: " << edad << "\nDNI: " << dni << std::endl;
 }
