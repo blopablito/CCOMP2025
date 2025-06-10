@@ -1,11 +1,21 @@
-#ifndef PRODUCTO_HPP
-#define PRODUCTO_HPP
-#include "Inventario.hpp"
-class Producto {
+#ifndef PRODUCTOS_H
+#define PRODUCTOS_H
+
+class Productos {
 private:
-    std::string nombre;
-    int cantidad;
-    double preciouniddad;
+    char nombre[50];
+    double precioUnidad;
+    int cantidadMateriales;
 
 public:
-    Producto(std::string nombre, int cantidad, float preciounidad);
+    Productos(); // Constructor 
+    Productos(const char* nombre, double precioUnidad, int cantidadMateriales);
+
+    void mostrarProductos() const;
+
+    const char* getNombre() const;
+    double getPrecio() const;
+    int getCantidad() const;
+};
+
+#endif
