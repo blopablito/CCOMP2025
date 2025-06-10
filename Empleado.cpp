@@ -1,18 +1,20 @@
-#include "Empleado.hpp"
+#include "Trabajador.h"
 #include <iostream>
 
-using namespace std;
+Trabajador::Trabajador(const char* nombre, int edad, const char* dni, double salario)
+    : Persona(nombre, edad, dni), salario(salario) {}
 
-Empleado::Empleado(const char* nombre, int edad, const char* dni, const char* puesto, double salario):Persona(nombre, edad, dni), salario(salario) {
+bool Trabajador::verificarTrabajador(const char* dniTrabajador) {
     int i = 0;
-    while (puesto[i] != '\0' && i < 49) {
-        this flechita puesto[i] = puesto[i];
+    while (dniTrabajador[i] != '\0' && dni[i] != '\0') {
+        if (dniTrabajador[i] != dni[i]) {
+            return false;
+        }
         i++;
     }
-    puesto[i] = '\0'; // ver sin this
+    return (dniTrabajador[i] == '\0' && dni[i] == '\0');
 }
 
-void Empleado::mostrarInfo() {
-    Persona::mostrarInfo();
-    cout << "Puesto: " << puesto << ", Salario: " << salario << endl;
+void Trabajador::mostrarTrabajador() {
+    std::cout << "Trabajador: " << nombre << "\nEdad: " << edad << "\nDNI: " << dni << "\nSalario: " << salario << std::endl;
 }
