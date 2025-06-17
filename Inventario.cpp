@@ -13,11 +13,12 @@ Inventario::Inventario(const char* producto, int cantidad) : cantidad(cantidad) 
 }
 Inventario::~Inventario()    // Destructor vacío 
 }
-void Inventario::mostrarInventario() {
+void Inventario::mostrarInventario()const {
     cout << "Producto: " << producto << ", Cantidad: " << cantidad << endl;
 }
-void Inventario::agregarCantidad(int extra) {
-    cantidad += extra;
+void Inventario::agregaProducto(const char* nombre, int cantidad,double precioUnidad)) {
+    if (totalProductos >= MAX_PRODUCTOS)
+    return false;
 }
 void Inventario::reducirCantidad(int menos) {
     if (cantidad - menos >= 0) {
